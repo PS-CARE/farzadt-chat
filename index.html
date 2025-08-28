@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FarzaDT – ECE Advisor</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>FarzaDT • ECE Advisor (UL Lafayette)</h1>
+      <p class="sub">No sign-in required. Please keep questions course- and advising-related.</p>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite"></section>
+
+    <form id="chat-form" class="chat">
+      <input id="user-input" class="chat__input" type="text" placeholder="Type your question…" autocomplete="off" required />
+      <button class="chat__send" type="submit">Send</button>
+    </form>
+
+    <footer class="legal">
+      <small>
+        For emergencies or personal crises, contact UL resources directly. Never share passwords or sensitive data.
+      </small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
