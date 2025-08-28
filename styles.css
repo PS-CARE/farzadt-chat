@@ -1,0 +1,43 @@
+:root{
+  --bg:#0f1220; --panel:#171a2b; --ink:#e6e8f2; --muted:#a7abc2;
+  --accent:#e11d48; --line:#2a2e44;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.4 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.app{max-width:840px;margin:0 auto;padding:24px}
+.app__header{margin:8px 0 16px}
+h1{margin:0;font-size:22px}
+.sub{color:var(--muted);margin:6px 0 0}
+.messages{
+  background:var(--panel); border:1px solid var(--line); border-radius:12px;
+  height:58vh; padding:12px; overflow:auto;
+}
+.msg{
+  display:flex; gap:12px; margin:10px 0; align-items:flex-start;
+}
+.msg__avatar{
+  width:28px;height:28px;border-radius:50%;background:var(--line);flex:0 0 28px;
+}
+.msg--user .msg__avatar{background:linear-gradient(135deg,#1f8aed,#00d4ff)}
+.msg--bot .msg__avatar{background:linear-gradient(135deg,#ff5678,#ff1f5a)}
+.bubble{
+  padding:10px 12px; border-radius:12px; max-width:75%;
+  background:#20243a; border:1px solid var(--line);
+}
+.msg--user .bubble{background:#1a2140}
+.msg--bot .bubble{background:#20243a}
+.chat{display:flex; gap:8px; margin-top:12px}
+.chat__input{
+  flex:1; padding:12px; border-radius:10px; border:1px solid var(--line);
+  background:var(--panel); color:var(--ink);
+}
+.chat__send{
+  background:var(--accent); color:white; border:0; padding:0 16px;
+  border-radius:10px; cursor:pointer; font-weight:600;
+}
+.chat__send:disabled{opacity:.6;cursor:not-allowed}
+.legal{color:var(--muted);margin-top:10px}
